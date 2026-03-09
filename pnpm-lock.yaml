@@ -12,7 +12,7 @@ importers:
         specifier: ^0.0.12
         version: 0.0.12
       maroo-contracts:
-        specifier: 0.0.3
+        specifier: ^0.0.3
         version: 0.0.3
     devDependencies:
       '@types/node':

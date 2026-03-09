@@ -1,7 +1,7 @@
 /**
  * Precompile address and name mapping for Maroo testnet.
  * ABI/source: P256,Bech32,Staking,Distribution,Bank,Gov,Slashing from cosmos-evm-contracts;
- * OKRW,PCL from maroo-contracts@0.0.2.
+ * OKRW,PCL from maroo-contracts.
  */
 export const PRECOMPILE_ADDRESSES = {
   P256: "0x0000000000000000000000000000000000000100",
