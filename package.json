@@ -1,0 +1,20 @@
+{
+  "name": "maroo-assets",
+  "version": "1.0.0",
+  "description": "Generate Blockscout precompiles JSON for Maroo Chain",
+  "type": "module",
+  "packageManager": "pnpm@9.14.2",
+  "scripts": {
+    "build": "tsc",
+    "generate": "tsx scripts/generate.ts"
+  },
+  "dependencies": {
+    "cosmos-evm-contracts": "^0.0.12",
+    "maroo-contracts": "0.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.0.0"
+  }
+}
