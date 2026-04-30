@@ -13,6 +13,8 @@ export const PRECOMPILE_ADDRESSES = {
   Slashing: "0x0000000000000000000000000000000000000806",
   OKRW: "0x1000000000000000000000000000000000000001",
   PCL: "0x1000000000000000000000000000000000000005",
+  EAS: "0x1000000000000000000000000000000000000009",
+  AGENT: "0x100000000000000000000000000000000000000A",
 } as const;
 
 export const COSMOS_EVM_NAMES = [
@@ -25,7 +27,7 @@ export const COSMOS_EVM_NAMES = [
   "Slashing",
 ] as const;
 
-export const MAROO_NAMES = ["OKRW", "PCL"] as const;
+export const MAROO_NAMES = ["OKRW", "PCL", "EAS", "AGENT"] as const;
 
 export type CosmosEvmPrecompileName = (typeof COSMOS_EVM_NAMES)[number];
 export type MarooPrecompileName = (typeof MAROO_NAMES)[number];

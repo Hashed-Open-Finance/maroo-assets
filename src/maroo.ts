@@ -1,9 +1,11 @@
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { PRECOMPILE_ADDRESSES, type MarooPrecompileName } from "./config.js";
+import { MAROO_NAMES, PRECOMPILE_ADDRESSES, type MarooPrecompileName } from "./config.js";
 import { iOkrwAbi } from "maroo-contracts/abi/precompiles/okrw/IOkrw";
 import { iPclAbi } from "maroo-contracts/abi/precompiles/pcl/IPcl";
+import { iEasAbi } from "maroo-contracts/abi/precompiles/eas/IEas";
+import { iAgentAbi } from "maroo-contracts/abi/precompiles/agent/IAgent";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
@@ -19,11 +21,15 @@ function readMarooSol(subpath: string): string {
 const MAROO_ABI_MAP: Record<MarooPrecompileName, AbiEntry> = {
   OKRW: iOkrwAbi,
   PCL: iPclAbi,
+  EAS: iEasAbi,
+  AGENT: iAgentAbi,
 };
 
 const MAROO_SOL_PATHS: Record<MarooPrecompileName, string> = {
   OKRW: "okrw/IOkrw.sol",
   PCL: "pcl/IPcl.sol",
+  EAS: "eas/IEas.sol",
+  AGENT: "agent/IAgent.sol",
 };
 
 export interface MarooEntry {
@@ -36,7 +42,7 @@ export interface MarooEntry {
 export function collectMarooPrecompiles(): MarooEntry[] {
   const entries: MarooEntry[] = [];
 
-  for (const name of ["OKRW", "PCL"] as const) {
+  for (const name of MAROO_NAMES) {
     const abi = MAROO_ABI_MAP[name];
     const solPath = MAROO_SOL_PATHS[name];
     const source = readMarooSol(solPath);
