@@ -9,8 +9,8 @@
     "generate": "tsx scripts/generate.ts"
   },
   "dependencies": {
-    "cosmos-evm-contracts": "^0.0.12",
-    "maroo-contracts": "^0.0.3"
+    "cosmos-evm-contracts": "^0.0.13",
+    "maroo-contracts": "^0.0.4"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

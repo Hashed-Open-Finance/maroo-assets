@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       cosmos-evm-contracts:
-        specifier: ^0.0.12
-        version: 0.0.12
+        specifier: ^0.0.13
+        version: 0.0.13
       maroo-contracts:
-        specifier: ^0.0.3
-        version: 0.0.3
+        specifier: ^0.0.4
+        version: 0.0.4
     devDependencies:
       '@types/node':
         specifier: ^22.0.0
@@ -26,9 +26,6 @@ importers:
         version: 5.9.3
 
 packages:
-
-  '@account-abstraction/contracts@0.8.0':
-    resolution: {integrity: sha512-8krPx/gpnoT+5xAroagVCbeA7FbUigMZWXFKKPm+oghyr29Dksssdx5sI7xGv9212i4JPaDDUGFk58dpuwVgHA==}
 
   '@esbuild/aix-ppc64@0.27.3':
     resolution: {integrity: sha512-9fJMTNFTWZMh5qwrBItuziu834eOCUcEqymSH7pY+zoMVEZg3gcPuBNxH1EvfVYe9h0x/Ptw8KBzv7qxb7l8dg==}
@@ -186,36 +183,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@openzeppelin/contracts@3.4.2-solc-0.7':
-    resolution: {integrity: sha512-W6QmqgkADuFcTLzHL8vVoNBtkwjvQRpYIAom7KiUNoLKghyx3FgH0GBjt8NRvigV1ZmMOBllvE1By1C+bi8WpA==}
-
-  '@openzeppelin/contracts@5.6.1':
-    resolution: {integrity: sha512-Ly6SlsVJ3mj+b18W3R8gNufB7dTICT105fJhodGAGgyC2oqnBAhqSiNDJ8V8DLY05cCz81GLI0CU5vNYA1EC/w==}
-
   '@types/node@22.19.15':
     resolution: {integrity: sha512-F0R/h2+dsy5wJAUe3tAU6oqa2qbWY5TpNfL/RGmo1y38hiyO1w3x2jPtt76wmuaJI4DQnOBu21cNXQ2STIUUWg==}
 
-  '@uniswap/lib@4.0.1-alpha':
-    resolution: {integrity: sha512-f6UIliwBbRsgVLxIaBANF6w09tYqc6Y/qXdsrbEmXHyFA7ILiKrIwRFXe1yOg8M3cksgVsO9N7yuL2DdCGQKBA==}
-    engines: {node: '>=10'}
-
-  '@uniswap/v2-core@1.0.1':
-    resolution: {integrity: sha512-MtybtkUPSyysqLY2U210NBDeCHX+ltHt3oADGdjqoThZaFRDKwM6k1Nb3F0A3hk5hwuQvytFWhrWHOEq6nVJ8Q==}
-    engines: {node: '>=10'}
-
-  '@uniswap/v3-core@1.0.1':
-    resolution: {integrity: sha512-7pVk4hEm00j9tc71Y9+ssYpO6ytkeI0y7WE9P6UcmNzhxPePwyAxImuhVsTqWK9YFvzgtvzJHi64pBl4jUzKMQ==}
-    engines: {node: '>=10'}
-
-  '@uniswap/v3-periphery@1.4.4':
-    resolution: {integrity: sha512-S4+m+wh8HbWSO3DKk4LwUCPZJTpCugIsHrWR86m/OrUyvSqGDTXKFfc2sMuGXCZrD1ZqO3rhQsKgdWg3Hbb2Kw==}
-    engines: {node: '>=10'}
-
-  base64-sol@1.0.1:
-    resolution: {integrity: sha512-ld3cCNMeXt4uJXmLZBHFGMvVpK9KsLVEhPpFRXnvSVAqABKbuNZg/+dsq3NuM+wxFLb/UrVkz7m1ciWmkMfTbg==}
-
-  cosmos-evm-contracts@0.0.12:
-    resolution: {integrity: sha512-rxQuJWtHtrkyTNSFYfvYE0WyvIMm1a5i1Fh+llZYJ9dzab8dMzqEPL6zGh5bjUKWV8soo7u1H9OsufokW5SB/Q==}
+  cosmos-evm-contracts@0.0.13:
+    resolution: {integrity: sha512-g31oEufWYBO7ercpeVdcZ0JpH5hbUkpwi3Y4pA1pUnSe3i8VQll/KhnBW1JDhj7i6pq2Wp4/ZBH6Z14VyLz2zA==}
 
   esbuild@0.27.3:
     resolution: {integrity: sha512-8VwMnyGCONIs6cWue2IdpHxHnAjzxnw2Zr7MkVxB2vjmQ2ivqGFb4LEG3SMnv0Gb2F/G/2yA8zUaiL1gywDCCg==}
@@ -230,8 +202,8 @@ packages:
   get-tsconfig@4.13.6:
     resolution: {integrity: sha512-shZT/QMiSHc/YBLxxOkMtgSid5HFoauqCE3/exfsEcwg1WkeqjG+V40yBbBrsD+jW2HDXcs28xOfcbm2jI8Ddw==}
 
-  maroo-contracts@0.0.3:
-    resolution: {integrity: sha512-Ou77UdPaBtdd2HYYKJ2Z7Z9pXG4HNViRlvH3kxMHs+JSSfX87Rh/nAOwlZcJQ/7/XiRkUyyX3gobzBEVPOLvYQ==}
+  maroo-contracts@0.0.4:
+    resolution: {integrity: sha512-HQNlds34FKmWy/EHccoOHDaGY9r2jJFKOZq9IZz3WCYPKr2DHPU0QbN66PBzMcYq4Jm2liY6ln1XWkOFv+Jq7A==}
 
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
@@ -250,11 +222,6 @@ packages:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
 snapshots:
-
-  '@account-abstraction/contracts@0.8.0':
-    dependencies:
-      '@openzeppelin/contracts': 5.6.1
-      '@uniswap/v3-periphery': 1.4.4
 
   '@esbuild/aix-ppc64@0.27.3':
     optional: true
@@ -334,33 +301,11 @@ snapshots:
   '@esbuild/win32-x64@0.27.3':
     optional: true
 
-  '@openzeppelin/contracts@3.4.2-solc-0.7': {}
-
-  '@openzeppelin/contracts@5.6.1': {}
-
   '@types/node@22.19.15':
     dependencies:
       undici-types: 6.21.0
 
-  '@uniswap/lib@4.0.1-alpha': {}
-
-  '@uniswap/v2-core@1.0.1': {}
-
-  '@uniswap/v3-core@1.0.1': {}
-
-  '@uniswap/v3-periphery@1.4.4':
-    dependencies:
-      '@openzeppelin/contracts': 3.4.2-solc-0.7
-      '@uniswap/lib': 4.0.1-alpha
-      '@uniswap/v2-core': 1.0.1
-      '@uniswap/v3-core': 1.0.1
-      base64-sol: 1.0.1
-
-  base64-sol@1.0.1: {}
-
-  cosmos-evm-contracts@0.0.12:
-    dependencies:
-      '@account-abstraction/contracts': 0.8.0
+  cosmos-evm-contracts@0.0.13: {}
 
   esbuild@0.27.3:
     optionalDependencies:
@@ -398,7 +343,7 @@ snapshots:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
-  maroo-contracts@0.0.3: {}
+  maroo-contracts@0.0.4: {}
 
   resolve-pkg-maps@1.0.0: {}
 

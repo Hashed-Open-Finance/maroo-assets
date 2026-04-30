@@ -16,8 +16,15 @@ type AbiEntry = readonly unknown[];
 
 function readCosmosSol(subpath: string): string {
   const root = join(__dirname, "..", "node_modules", "cosmos-evm-contracts");
-  const full = join(root, "dist", "precompiles", "precompiles", subpath);
-  if (existsSync(full)) return readFileSync(full, "utf-8");
+  // cosmos-evm-contracts 0.0.13+: dist/precompiles/<name>.sol
+  // older layouts used dist/precompiles/precompiles/<name>.sol (same as maroo-contracts)
+  const candidates = [
+    join(root, "dist", "precompiles", subpath),
+    join(root, "dist", "precompiles", "precompiles", subpath),
+  ];
+  for (const full of candidates) {
+    if (existsSync(full)) return readFileSync(full, "utf-8");
+  }
   return "";
 }
 
