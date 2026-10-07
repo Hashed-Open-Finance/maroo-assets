@@ -1,7 +1,8 @@
 /**
  * Precompile address and name mapping for Maroo testnet.
- * ABI/source: P256,Bech32,Staking,Distribution,Bank,Gov,Slashing from cosmos-evm-contracts;
- * OKRW,PCL from maroo-contracts.
+ * ABI/source: Bech32,Staking,Distribution,Bank,Gov,Slashing from cosmos-evm-contracts;
+ * P256 defined in this repo (src/p256.ts);
+ * OKRW,PCL,EAS,AGENT,PRIVACY from @maroo-chain/contracts.
  */
 export const PRECOMPILE_ADDRESSES = {
   P256: "0x0000000000000000000000000000000000000100",
@@ -15,6 +16,7 @@ export const PRECOMPILE_ADDRESSES = {
   PCL: "0x1000000000000000000000000000000000000005",
   EAS: "0x1000000000000000000000000000000000000009",
   AGENT: "0x100000000000000000000000000000000000000A",
+  PRIVACY: "0x100000000000000000000000000000000000000B",
 } as const;
 
 export const COSMOS_EVM_NAMES = [
@@ -27,7 +29,7 @@ export const COSMOS_EVM_NAMES = [
   "Slashing",
 ] as const;
 
-export const MAROO_NAMES = ["OKRW", "PCL", "EAS", "AGENT"] as const;
+export const MAROO_NAMES = ["OKRW", "PCL", "EAS", "AGENT", "PRIVACY"] as const;
 
 export type CosmosEvmPrecompileName = (typeof COSMOS_EVM_NAMES)[number];
 export type MarooPrecompileName = (typeof MAROO_NAMES)[number];
