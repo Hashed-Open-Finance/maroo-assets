@@ -34,15 +34,18 @@ Use this URL as the precompiles asset path in Blockscout settings so the explore
 
 | Name | Address | ABI/source |
 |------|---------|------------|
-| P256 | `0x0000000000000000000000000000000000000100` | Defined in this repo (EIP-7212 / Cosmos EVM) |
+| P256 | `0x0000000000000000000000000000000000000100` | Defined in this repo (RIP-7212 / Cosmos EVM). No function selector: empty ABI, raw 160-byte input documented in source |
 | Bech32 | `0x0000000000000000000000000000000000000400` | cosmos-evm-contracts |
 | Staking | `0x0000000000000000000000000000000000000800` | cosmos-evm-contracts |
 | Distribution | `0x0000000000000000000000000000000000000801` | cosmos-evm-contracts |
 | Bank | `0x0000000000000000000000000000000000000804` | cosmos-evm-contracts |
 | Gov | `0x0000000000000000000000000000000000000805` | cosmos-evm-contracts |
 | Slashing | `0x0000000000000000000000000000000000000806` | cosmos-evm-contracts |
-| OKRW | `0x1000000000000000000000000000000000000001` | maroo-contracts |
-| PCL | `0x1000000000000000000000000000000000000005` | maroo-contracts |
+| OKRW | `0x1000000000000000000000000000000000000001` | @maroo-chain/contracts |
+| PCL | `0x1000000000000000000000000000000000000005` | @maroo-chain/contracts |
+| EAS | `0x1000000000000000000000000000000000000009` | @maroo-chain/contracts |
+| AGENT | `0x100000000000000000000000000000000000000A` | @maroo-chain/contracts |
+| PRIVACY | `0x100000000000000000000000000000000000000B` | @maroo-chain/contracts |
 
 ## Adding new precompiles
 
@@ -52,7 +55,7 @@ When new precompiles are added to the chain, follow these steps.
 
 - Add the address to `PRECOMPILE_ADDRESSES` as `Name: "0x..."`.
 - If the precompile comes from **cosmos-evm-contracts** → add the name to the `COSMOS_EVM_NAMES` array.
-- If it comes from **maroo-contracts** → add the name to the `MAROO_NAMES` array.
+- If it comes from **@maroo-chain/contracts** → add the name to the `MAROO_NAMES` array.
 - If it’s **custom** (not from either package) → add the name to `COSMOS_EVM_NAMES` and define ABI/source in a separate module (see step 2).
 
 ### 2. Wire ABI and source
@@ -62,7 +65,7 @@ When new precompiles are added to the chain, follow these steps.
   - Add the name and paths to `COSMOS_ABI_MAP` and `COSMOS_SOL_PATHS`.  
   - If the name is already in `COSMOS_EVM_NAMES`, it will be picked up automatically by `collectCosmosEvmPrecompiles()`.
 
-- **From maroo-contracts**  
+- **From @maroo-chain/contracts**  
   - In `src/maroo.ts`, import the module (e.g. `abi/precompiles/<module>/<Interface>`).  
   - Add the name and paths to `MAROO_ABI_MAP` and `MAROO_SOL_PATHS`.  
   - `collectMarooPrecompiles()` iterates over `MAROO_NAMES`, so adding the name in step 1 is enough for it to be collected.
@@ -82,4 +85,4 @@ Confirm the new precompile appears in `output/precompiles-maroo.json`, then add 
 ## Dependencies
 
 - **[cosmos-evm-contracts](https://www.npmjs.com/package/cosmos-evm-contracts)** — P256 (manual), Bech32, Staking, Distribution, Bank, Gov, Slashing interfaces/ABI
-- **[maroo-contracts](https://www.npmjs.com/package/maroo-contracts)** — OKRW, PCL interfaces/ABI
+- **[@maroo-chain/contracts](https://www.npmjs.com/package/@maroo-chain/contracts)** — OKRW, PCL, EAS, AGENT, PRIVACY interfaces/ABI

@@ -8,12 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@maroo-chain/contracts':
+        specifier: ^0.0.9
+        version: 0.0.9
       cosmos-evm-contracts:
         specifier: ^0.0.13
         version: 0.0.13
-      maroo-contracts:
-        specifier: ^0.0.4
-        version: 0.0.4
     devDependencies:
       '@types/node':
         specifier: ^22.0.0
@@ -183,6 +183,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@maroo-chain/contracts@0.0.9':
+    resolution: {integrity: sha512-JrKcn0LrT09zzxySBv7+xANIshRRvEq2IaSeLFDSVQbdNj3hWT3RQvFQn4nC3V8ca4ZjZVBk7aOyATiUaKb6Uw==}
+
   '@types/node@22.19.15':
     resolution: {integrity: sha512-F0R/h2+dsy5wJAUe3tAU6oqa2qbWY5TpNfL/RGmo1y38hiyO1w3x2jPtt76wmuaJI4DQnOBu21cNXQ2STIUUWg==}
 
@@ -201,9 +204,6 @@ packages:
 
   get-tsconfig@4.13.6:
     resolution: {integrity: sha512-shZT/QMiSHc/YBLxxOkMtgSid5HFoauqCE3/exfsEcwg1WkeqjG+V40yBbBrsD+jW2HDXcs28xOfcbm2jI8Ddw==}
-
-  maroo-contracts@0.0.4:
-    resolution: {integrity: sha512-HQNlds34FKmWy/EHccoOHDaGY9r2jJFKOZq9IZz3WCYPKr2DHPU0QbN66PBzMcYq4Jm2liY6ln1XWkOFv+Jq7A==}
 
   resolve-pkg-maps@1.0.0:
     resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==}
@@ -301,6 +301,8 @@ snapshots:
   '@esbuild/win32-x64@0.27.3':
     optional: true
 
+  '@maroo-chain/contracts@0.0.9': {}
+
   '@types/node@22.19.15':
     dependencies:
       undici-types: 6.21.0
@@ -342,8 +344,6 @@ snapshots:
   get-tsconfig@4.13.6:
     dependencies:
       resolve-pkg-maps: 1.0.0
-
-  maroo-contracts@0.0.4: {}
 
   resolve-pkg-maps@1.0.0: {}
 
